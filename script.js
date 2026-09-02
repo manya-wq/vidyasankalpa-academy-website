@@ -293,3 +293,126 @@ if (yearElement) {
 console.log(
     "Vidyasankalpa Academy website loaded successfully."
 );
+const counsellingForm =
+    document.getElementById("counselling-form");
+
+if (counsellingForm) {
+
+    counsellingForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const studentName =
+            document.getElementById("student-name").value.trim();
+
+        const parentName =
+            document.getElementById("parent-name").value.trim();
+
+        const mobile =
+            document.getElementById("mobile").value.trim();
+
+        const currentClass =
+            document.getElementById("class").value;
+
+        const school =
+            document.getElementById("school").value.trim();
+
+        const exam =
+            document.getElementById("exam").value;
+
+        const contactTime =
+            document.getElementById("contact-time").value.trim();
+
+
+        /* CHECK REQUIRED FIELDS */
+
+        if (
+            !studentName ||
+            !parentName ||
+            !mobile ||
+            !currentClass ||
+            !exam
+        ) {
+
+            document.getElementById("form-message").textContent =
+                "Please fill in all required fields.";
+
+            return;
+        }
+
+
+        /* MESSAGE */
+
+        const message =
+`Hello Vidyasankalpa Academy,
+
+I would like to request a counselling session.
+
+Student Name: ${studentName}
+Parent Name: ${parentName}
+Mobile Number: ${mobile}
+Current Class: ${currentClass}
+School / College: ${school || "Not provided"}
+Interested Examination: ${exam}
+Preferred Contact Time: ${contactTime || "Not provided"}
+
+Thank you.`;
+
+
+        /* =========================
+           WHATSAPP
+        ========================== */
+
+        const whatsappNumber =
+            "919876543210";
+
+        const whatsappURL =
+            "https://wa.me/" +
+            whatsappNumber +
+            "?text=" +
+            encodeURIComponent(message);
+
+
+        /* =========================
+           EMAIL
+        ========================== */
+
+        const academyEmail =
+            "youracademy@gmail.com";
+
+        const emailSubject =
+            "Free Counselling Request - " + studentName;
+
+        const emailURL =
+            "mailto:" +
+            academyEmail +
+            "?subject=" +
+            encodeURIComponent(emailSubject) +
+            "&body=" +
+            encodeURIComponent(message);
+
+
+        /* =========================
+           OPEN BOTH
+        ========================== */
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+        setTimeout(function () {
+
+            window.location.href = emailURL;
+
+        }, 1000);
+
+
+        /* SUCCESS MESSAGE */
+
+        document.getElementById("form-message").textContent =
+            "Your counselling request is ready to send via WhatsApp and Email.";
+
+    });
+
+}

@@ -1921,77 +1921,442 @@ section {
    COUNSELLING FORM
    ========================================================= */
 
-.counselling-form {
-    max-width: 850px;
+/* =====================================================
+   FREE COUNSELLING SECTION
+===================================================== */
 
-    margin: auto;
+.counselling-section {
+    position: relative;
+    padding: 110px 7%;
 
-    padding: 35px;
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(220, 174, 67, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(6, 27, 48, 0.08),
+            transparent 30%
+        ),
+        #f8f9fb;
 
-    background: var(--white);
-
-    border-radius: 18px;
-
-    box-shadow:
-        0 25px 60px
-        rgba(0,0,0,0.20);
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
-    gap: 20px;
+    overflow: hidden;
 }
 
 
-.form-group {
+/* Decorative background circles */
+
+.counselling-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border: 1px solid rgba(220, 174, 67, 0.15);
+
+    border-radius: 50%;
+
+    top: -220px;
+    right: -180px;
+
+    animation: counsellingFloat 12s linear infinite;
+}
+
+.counselling-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid rgba(6, 27, 48, 0.08);
+
+    border-radius: 50%;
+
+    bottom: -150px;
+    left: -120px;
+
+    animation: counsellingFloat 15s linear infinite reverse;
+}
+
+
+/* =====================================================
+   SECTION HEADING
+===================================================== */
+
+.counselling-section .section-heading {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 750px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+
+.counselling-section .section-label {
+    margin-bottom: 15px;
+
+    color: #dcae43;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.counselling-section .section-heading h2 {
+    margin: 0;
+
+    color: #061b30;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(38px, 5vw, 58px);
+
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+}
+
+
+.counselling-section .section-heading > p:last-child {
+    max-width: 650px;
+
+    margin: 22px auto 0;
+
+    color: #617286;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   FORM CONTAINER
+===================================================== */
+
+.counselling-form {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 45px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #e3e7ec;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 25px 70px rgba(6, 27, 48, 0.10);
+
+    backdrop-filter: blur(10px);
+
+    animation: counsellingFormReveal 0.9s ease forwards;
+}
+
+
+/* =====================================================
+   FORM GROUP
+===================================================== */
+
+.counselling-form .form-group {
     display: flex;
 
     flex-direction: column;
 
-    gap: 7px;
+    gap: 8px;
 }
 
 
-.form-group label {
-    color: var(--navy);
+.counselling-form .form-group label {
+    color: #061b30;
 
-    font-size: 12px;
+    font-size: 14px;
 
     font-weight: 700;
 }
 
 
-.form-group input,
-.form-group select {
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.counselling-form input,
+.counselling-form select {
     width: 100%;
 
-    padding: 13px;
+    height: 52px;
 
-    border:
-        1px solid var(--border);
+    box-sizing: border-box;
 
-    border-radius: 8px;
+    padding: 0 16px;
+
+    border: 1px solid #dce2e8;
+
+    border-radius: 7px;
+
+    background: #fdfdfd;
+
+    color: #061b30;
+
+    font-family: inherit;
+
+    font-size: 15px;
 
     outline: none;
 
     transition:
-        border 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.counselling-form input::placeholder {
+    color: #9aa7b5;
+}
+
+
+/* Focus effect */
+
+.counselling-form input:focus,
+.counselling-form select:focus {
+    border-color: #dcae43;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(220, 174, 67, 0.12);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   SELECT
+===================================================== */
+
+.counselling-form select {
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.counselling-form .primary-btn {
+    grid-column: span 2;
+
+    width: 100%;
+
+    min-height: 54px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #061b30;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
         box-shadow 0.3s ease;
 }
 
 
-.form-group input:focus,
-.form-group select:focus {
-    border-color:
-        var(--gold);
+.counselling-form .primary-btn:hover {
+    transform: translateY(-4px);
+
+    background: #dcae43;
+
+    color: #061b30;
 
     box-shadow:
-        0 0 0 3px
-        rgba(201,154,61,0.12);
+        0 15px 30px rgba(220, 174, 67, 0.25);
 }
 
+
+.counselling-form .primary-btn:active {
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   SUCCESS / ERROR MESSAGE
+===================================================== */
+
+#form-message {
+    grid-column: span 2;
+
+    margin: 0;
+
+    text-align: center;
+
+    color: #061b30;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    min-height: 20px;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes counsellingFormReveal {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes counsellingFloat {
+
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.05);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .counselling-section {
+        padding: 75px 20px;
+    }
+
+
+    .counselling-section .section-heading {
+        margin-bottom: 40px;
+    }
+
+
+    .counselling-section .section-heading h2 {
+        font-size: 38px;
+
+        letter-spacing: -0.5px;
+    }
+
+
+    .counselling-section .section-heading > p:last-child {
+        font-size: 15px;
+    }
+
+
+    .counselling-form {
+        grid-template-columns: 1fr;
+
+        padding: 28px 22px;
+
+        gap: 20px;
+
+        border-radius: 12px;
+    }
+
+
+    .counselling-form .primary-btn {
+        grid-column: span 1;
+
+        margin-top: 5px;
+    }
+
+
+    #form-message {
+        grid-column: span 1;
+    }
+
+
+    .counselling-form input,
+    .counselling-form select {
+        height: 50px;
+
+        font-size: 15px;
+    }
+
+
+    .counselling-section::before {
+        width: 300px;
+        height: 300px;
+
+        right: -170px;
+    }
+
+
+    .counselling-section::after {
+        width: 220px;
+        height: 220px;
+
+        left: -130px;
+    }
+
+}
 
 /* =========================================================
    FAQ
