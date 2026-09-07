@@ -6,51 +6,86 @@
 
     <title>Faculty | Vidyasankalpa Academy</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
 <!-- ================= NAVBAR ================= -->
 
-<header class="navbar">
-
-    <div class="nav-container">
-
-        <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="Vidyasankalpa Academy">
+<header class="header">
+        <nav class="navbar">
+            <a href="#home" class="logo">
+            <img src="images/logo.jpeg" alt="Vidyasankalpa Academy Logo">
             <span>Vidyasankalpa Academy</span>
-        </a>
+            </a>
 
-        <nav class="nav-links" id="navLinks">
+            
 
-            <a href="index.html">Home</a>
+             <ul class="nav-links"
+            id="navLinks">
 
-            <a href="about.html">About</a>
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
 
-            <a href="programs.html">Programs</a>
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
 
-            <a href="faculty.html" class="active">Faculty</a>
+            <li>
+                <a href="program.html">
+                    Programs
+                </a>
+            </li>
 
-            <a href="results.html">Results</a>
+            <li>
+                <a href="faculty.html"
+                class="active">
+                    Faculty
+                </a>
+            </li>
 
-            <a href="faq.html">FAQ</a>
+            <li>
+                <a href="results.html">
+                    Results
+                </a>
+            </li>
 
-            <a href="index.html#counselling">Contact</a>
+            <li>
+                <a href="index.html#faq">
+                    FAQ
+                </a>
+            </li>
 
-        </nav>
+            <li>
+                <a href="index.html#counselling">
+                    Contact
+                </a>
+            </li>
 
-        <button class="hamburger" id="hamburger" aria-label="Menu">
+        </ul>
 
+        <button class="menu-toggle" id="menuToggle">
             <span></span>
             <span></span>
             <span></span>
-
         </button>
+        
 
-    </div>
+       
+
+
+        
+
+    </nav>
 
 </header>
+
 
 
 <!-- ================= FACULTY HERO ================= -->
@@ -365,104 +400,295 @@
 
 
 <!-- ================= FOOTER ================= -->
-
-<footer class="footer">
+<footer class="main-footer">
 
     <div class="footer-container">
 
+        <!-- ================= BRAND ================= -->
 
         <div class="footer-brand">
 
-            <img src="images/logo.png"
-                 alt="Vidyasankalpa Academy">
+            <img src="images/logo.jpeg"
+                 alt="Vidyasankalpa Academy Logo"
+                 class="footer-logo">
+
+            <h2>
+                Vidyasankalpa<br>
+                Academy
+            </h2>
+
+            <p class="footer-description">
+                Integrated Academic & Competitive
+                Examination Coaching for PUC
+                Students.
+            </p>
+
+            <p class="footer-tagline">
+                BUILD THE FOUNDATION.<br>
+                MASTER THE COMPETITION.
+            </p>
+
+
+            <!-- SOCIAL ICONS -->
+
+            <div class="footer-social">
+
+                <a href="#"
+                   aria-label="Instagram"
+                   class="social-icon">
+                    ◎
+                </a>
+
+                <a href="#"
+                   aria-label="Facebook"
+                   class="social-icon">
+                    f
+                </a>
+
+                <a href="#"
+                   aria-label="YouTube"
+                   class="social-icon">
+                    ▶
+                </a>
+
+                <a href="#"
+                   aria-label="WhatsApp"
+                   class="social-icon">
+                    ◉
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= QUICK LINKS ================= -->
+
+        <div class="footer-column">
 
             <h3>
-                Vidyasankalpa Academy
+                Quick Links
             </h3>
 
-            <p>
-                Integrated academic and competitive examination
-                preparation for PUC students.
-            </p>
-
-        </div>
+            <div class="footer-heading-line"></div>
 
 
-        <div class="footer-links">
+            <a href="index.html">
+                Home
+            </a>
 
-            <h4>Quick Links</h4>
+            <a href="about.html">
+                About
+            </a>
 
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="programs.html">Programs</a>
-            <a href="faculty.html">Faculty</a>
-            <a href="results.html">Results</a>
-            <a href="faq.html">FAQ</a>
+            <a href="programs.html">
+                Programs
+            </a>
 
-        </div>
+            <a href="faculty.html">
+                Faculty
+            </a>
 
+            <a href="results.html">
+                Results
+            </a>
 
-        <div class="footer-contact">
+            <a href="faq.html">
+                FAQ
+            </a>
 
-            <h4>Contact</h4>
-
-            <p>8123441586</p>
-
-            <p>
-                vidyasankalpaacademy@gmail.com
-            </p>
-
-            <a href="index.html#counselling">
-                Book Counselling
+            <a href="contact.html">
+                Contact
             </a>
 
         </div>
 
 
+        <!-- ================= PROGRAMS ================= -->
+
+        <div class="footer-column">
+
+            <h3>
+                Our Programs
+            </h3>
+
+            <div class="footer-heading-line"></div>
+
+
+            <a href="programs.html">
+                CET Preparation
+            </a>
+
+            <a href="programs.html">
+                NEET Preparation
+            </a>
+
+            <a href="programs.html">
+                Integrated PUC Preparation
+            </a>
+
+            <a href="programs.html">
+                Regular Practice
+            </a>
+
+            <a href="programs.html">
+                Revision Support
+            </a>
+
+            <a href="programs.html">
+                DPP & Tests
+            </a>
+
+            <a href="programs.html">
+                Performance Analysis
+            </a>
+
+        </div>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <div class="footer-column footer-contact">
+
+            <h3>
+                Contact Us
+            </h3>
+
+            <div class="footer-heading-line"></div>
+
+
+            <!-- PHONE -->
+
+            <div class="contact-box">
+
+                <div class="contact-circle">
+                    ☎
+                </div>
+
+                <div class="contact-text">
+
+                    <span>
+                        Call Us
+                    </span>
+
+                    <a href="tel:8123441586">
+                        8123441586
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-box">
+
+                <div class="contact-circle">
+                    ✉
+                </div>
+
+                <div class="contact-text">
+
+                    <span>
+                        Email Us
+                    </span>
+
+                    <a href="mailto:vidyasankalpaacademy@gmail.com">
+                        vidyasankalpaacademy@gmail.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADDRESS -->
+
+            <div class="contact-box">
+
+                <div class="contact-circle">
+                    ●
+                </div>
+
+                <div class="contact-text">
+
+                    <span>
+                        Visit Us
+                    </span>
+
+                    <p>
+                        282, Lakshmi Vilas Road,<br>
+                        behind Sadvidya PU College,<br>
+                        Subbarayanakere,<br>
+                        KR Mohalla, Chamrajpura,<br>
+                        Mysuru, Karnataka 570024
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
 
+    <!-- =================================================
+         GOLD DIVIDER
+         ================================================= -->
+
+    <div class="footer-divider"></div>
+
+
+    <!-- =================================================
+         FOOTER BOTTOM
+         ================================================= -->
+
     <div class="footer-bottom">
 
-        <p>
-            © 2026 Vidyasankalpa Academy. All Rights Reserved.
-        </p>
+        <div class="footer-bottom-container">
+
+            <p>
+                © <span id="currentYear">2026</span>
+                Vidyasankalpa Academy.
+                All Rights Reserved.
+            </p>
+
+
+            <div class="footer-legal">
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <span class="legal-divider"></span>
+
+                <a href="#">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+        </div>
 
     </div>
 
 </footer>
 
 
-<!-- ================= JAVASCRIPT ================= -->
+<!-- BACK TO TOP -->
 
-<script>
-
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("navLinks");
-
-hamburger.addEventListener("click", () => {
-
-    navLinks.classList.toggle("active");
-
-    hamburger.classList.toggle("active");
-
-});
+<button id="backToTop"
+        aria-label="Back to top">
+    ↑
+</button>
 
 
-const navItems = document.querySelectorAll(".nav-links a");
+<script src="js/script.js"></script>
 
-navItems.forEach(item => {
 
-    item.addEventListener("click", () => {
 
-        navLinks.classList.remove("active");
-        hamburger.classList.remove("active");
-
-    });
-
-});
-
-</script>
 
 </body>
 </html>

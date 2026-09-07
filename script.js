@@ -416,3 +416,64 @@ Thank you.`;
     });
 
 }
+/*faq*/
+
+
+
+/* =========================================================
+   FAQ DROPDOWN
+   ========================================================= */
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", () => {
+
+        const isOpen = item.classList.contains("active");
+
+
+        /* Close all FAQ items */
+
+        faqItems.forEach(otherItem => {
+            otherItem.classList.remove("active");
+        });
+
+
+        /* Open the clicked item */
+
+        if (!isOpen) {
+            item.classList.add("active");
+        }
+
+    });
+
+});
+
+
+/* =========================================================
+   NAVBAR FAQ LINK
+   ========================================================= */
+
+document.querySelectorAll('a[href="index.html#faq"]').forEach(link => {
+
+    link.addEventListener("click", function () {
+
+        const navLinks = document.getElementById("navLinks");
+        const hamburger = document.getElementById("hamburger");
+
+        if (navLinks) {
+            navLinks.classList.remove("active");
+        }
+
+        if (hamburger) {
+            hamburger.classList.remove("active");
+        }
+
+    });
+
+});
+
+
